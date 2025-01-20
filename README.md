@@ -19,7 +19,6 @@ This completes our GitOps-based CI/CD pipeline project using ArgoCD. Here's a br
 3. Kubernetes manifests for blue-green deployments.
 4. A GitHub Actions workflow for continuous integration.
 5. An ArgoCD application manifest for continuous deployment.
-6. A comprehensive README file with instructions and explanations.
 
 ## To use this pipeline:
 
