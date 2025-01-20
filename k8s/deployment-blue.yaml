@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coolapp-blue
+  labels:
+    app: coolapp
+    version: blue
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: coolapp
+      version: blue
+  template:
+    metadata:
+      labels:
+        app: coolapp
+        version: blue
+    spec:
+      containers:
+      - name: coolapp
+        image: your-registry/coolapp:blue
+        ports:
+        - containerPort: 3000
+        env:
+        - name: APP_VERSION
+          value: "1.0-blue"
+        - name: NODE_ENV
+          value: "production"
+        - name: BUILD_DATE
+          value: "{{ .Values.buildDate }}"
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 500m
+            memory: 256Mi
+
