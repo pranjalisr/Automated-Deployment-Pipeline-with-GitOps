@@ -1,6 +1,6 @@
 # GitOps CI/CD Pipeline with ArgoCD
 
-Hey there, fellow DevOps enthusiast! 👋 Welcome to awesome GitOps CI/CD pipeline project. I'm using ArgoCD to automatically deploy our super cool (albeit simple) web app to Kubernetes clusters. No more manual deployments - we're living in the future!
+Hey there, fellow DevOps enthusiast! 👋 Welcome to awesome GitOps CI/CD pipeline project. I'm using ArgoCD to automatically deploy my super cool (albeit simple) web app to Kubernetes clusters. No more manual deployments - we're living in the future!
 
 ## What's this all about?
 
